@@ -1,14 +1,14 @@
 resource "aws_instance" "myec1" {
   ami           = "ami-0b72821e2f351e396"
   instance_type = "t2.micro"
-  #   tags          = local.tags
+  tags          = local.tags
 
-  #   lifecycle {
-  #     create_before_destroy = true
-  #     ignore_changes = [
-  #       tags["Environment"]
-  #     ]
-  #   }
+  lifecycle {
+    create_before_destroy = true
+    ignore_changes = [
+      tags["Environment"]
+    ]
+  }
   security_groups = [aws_security_group.mysg.name]
 }
 
