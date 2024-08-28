@@ -11,11 +11,11 @@ variable "egress_ports" {
   }
 }
 
-locals {
-  tags = {
-    "Name"  = "FirstInstanceByTerraform"
-    "Date"  = formatdate("DD MM YYYY hh:mm:ss ZZZ", timestamp())
-    "Owner" = "Sai Siva"
-    "Role"  = "Billing"
-  }
-}
+# locals {
+#   tags = {
+#     "Name"  = "FirstInstanceByTerraform"
+#     "Date"  = formatdate("DD MM YYYY hh:mm:ss ZZZ", timestamp())
+#     "Owner" = "Sai Siva"
+#     "Role"  = "Billing"
+#   }
+# }
